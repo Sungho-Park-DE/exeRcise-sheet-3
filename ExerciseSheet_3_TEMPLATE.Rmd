@@ -90,12 +90,12 @@ b)  Load the data for both years into R. Check the type of the count
     not numeric? Fix the problem in an appropriate manner, it is OK if
     some of the counts are inaccurate because of this. Explain your
     solution and the repercussions.  
--The Variable "Anzahl" is not  numeric, because the var "Anzahl" is abbreviated ,which has count of first name under 4. If the "Anzahl" has as Value '4 oder weniger', that Value is changed in a new  Variable "count" to -1, and  Variables "count" have now Data Type "Numeric".  
+-The Variable "Anzahl" is not  numeric, because the var "Anzahl" is abbreviated ,which has count of first name under 4. If the "Anzahl" has as Value '4 oder weniger', that Value is changed in a new  Variable "count" to 2, and  Variables "count" have now Data Type "Numeric".  
 ```{r}
 library(tidyverse)
-vornamen_2021 <- vornamen_2021 %>% mutate(count = ifelse(vornamen_2021$Anzahl=='4 oder weniger',-1,vornamen_2021$Anzahl))
+vornamen_2021 <- vornamen_2021 %>% mutate(count = ifelse(vornamen_2021$Anzahl=='4 oder weniger',2,vornamen_2021$Anzahl))
 vornamen_2021$count <- as.numeric(vornamen_2021$count)
-vornamen_2022 <- vornamen_2022 %>% mutate(count = ifelse(vornamen_2022$Anzahl=='4 oder weniger',-1,vornamen_2022$Anzahl))
+vornamen_2022 <- vornamen_2022 %>% mutate(count = ifelse(vornamen_2022$Anzahl=='4 oder weniger',2,vornamen_2022$Anzahl))
 vornamen_2022$count <- as.numeric(vornamen_2022$count)
 ```
 

@@ -43,13 +43,13 @@ c)  For all of the following tasks in this exercise sheet we ask you to
 > create multiple commits to track the changes.
 
 d)  Name 2 strengths and 2 weaknesses of git. (Don't forget to create a
-    commit after this answer, see *1c*)
-    strength 
-      Branching and Merging: Git provides powerful branching and merging capabilities. Developers can            create multiple branches to work on different features or experiments independently, and later merge       them back into the main codebase. This enables parallel development, isolation of changes, and             facilitates collaboration among team members.  
-      Version Control: Git excels at managing versions of a project's source code. It tracks changes at a        granular level, allowing you to view the history of modifications, compare different versions, and         easily revert to a previous state if needed. This capability is particularly useful in collaborative       development environments.
-    weaknesses:
-      Complexity with Advanced Features: While Git's core functionality is relatively straightforward, it        can become more complex when dealing with advanced features such as rebasing, resolving conflicts, or       handling submodules. These operations may require a deeper understanding of Git's internal                 workings, and mistakes can potentially lead to data loss or confusion if not executed properly.
-      Steep Learning Curve: Git has a reputation for having a steep learning curve, especially for users         who are new to version control systems or have only worked with centralized systems in the past. The       command-line interface and the multitude of commands and options can be overwhelming for beginners.        However, there are also user-friendly Git clients available that provide graphical interfaces and          simplify the learning process.
+    commit after this answer, see *1c*). 
+  **-strength**.  
+      Branching and Merging: Git provides powerful branching and merging capabilities. Developers can            create multiple branches to work on different features or experiments independently, and later merge       them back into the main codebase. This enables parallel development, isolation of changes, and             facilitates collaboration among team members.    
+      Version Control: Git excels at managing versions of a project's source code. It tracks changes at a        granular level, allowing you to view the history of modifications, compare different versions, and         easily revert to a previous state if needed. This capability is particularly useful in collaborative       development environments.  
+  **-weakness**.  
+  Complexity with Advanced Features: While Git's core functionality is relatively straightforward, it        can become more complex when dealing with advanced features such as rebasing, resolving conflicts,         or handling submodules. These operations may require a deeper understanding of Git's internal              workings, and mistakes can potentially lead to data loss or confusion if not executed properly.  
+  Steep Learning Curve: Git has a reputation for having a steep learning curve, especially for users         who are new to version control systems or have only worked with centralized systems in the past. The       command-line interface and the multitude of commands and options can be overwhelming for beginners.        However, there are also user-friendly Git clients available that provide graphical interfaces and          simplify the learning process. 
 
 e)  Knit this exercise sheet. Some new files will automatically be
     generated when knitting the sheet e.g. the HTML page. Ignore these
@@ -90,9 +90,6 @@ b)  Load the data for both years into R. Check the type of the count
     not numeric? Fix the problem in an appropriate manner, it is OK if
     some of the counts are inaccurate because of this. Explain your
     solution and the repercussions.
-```{r}
-View(vornamen_2021)
-```
   because the var 'Anzahl' is abbreviated ,which has count of first name under 4  
 
 c)  Calculate the total number of babies born in Munich in 2022

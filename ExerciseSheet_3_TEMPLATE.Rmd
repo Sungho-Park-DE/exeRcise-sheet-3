@@ -104,7 +104,6 @@ c)  Calculate the total number of babies born in Munich in 2022
     Year 2021 has bigger baby-boom then Year 2022. But the Values are not an exact Value ,because some Values in Column "Anzahl" are not pricise detemined,e.g "4 oder weniger". 
 
 ```{r}
-view(vornamen_2021)
 total_babies_2021 <- sum(vornamen_2021$count)
 total_babies_2022 <- sum(vornamen_2022$count)
 ```
@@ -112,7 +111,10 @@ total_babies_2022 <- sum(vornamen_2022$count)
 
 d)  Add a new column `year` to both datasets which holds the correct
     year for each.
-
+```{r}
+vornamen_2021 <- vornamen_2021 %>% mutate(year=2021)
+vornamen_2022 <- vornamen_2022 %>% mutate(year=2022)
+```
 e)  Combine both datasets into one using `bind_rows()`.
 
 f)  Combine the counts for same names to determine the most popular

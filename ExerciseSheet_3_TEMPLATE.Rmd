@@ -111,10 +111,7 @@ total_babies_2022 <- sum(vornamen_2022$count)
 
 d)  Add a new column `year` to both datasets which holds the correct
     year for each.
-```{r}
-vornamen_2021 <- vornamen_2021 %>% mutate(year=2021)
-vornamen_2022 <- vornamen_2022 %>% mutate(year=2022)
-```
+
 e)  Combine both datasets into one using `bind_rows()`.
 
 f)  Combine the counts for same names to determine the most popular

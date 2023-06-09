@@ -1,6 +1,6 @@
 ---
 title: 'Exercise #3'
-author: "Sungho Park (12469817), Jonas Reinhard (Martrikelnummer), ..."
+author: "Sungho Park (12469817), Jonas Reinhard (12442176), ..."
 date: "`r Sys.Date()`"
 output: pdf_document
 subtitle: "Fortgeschrittene Statistische Software für NF - SS 2022/23"

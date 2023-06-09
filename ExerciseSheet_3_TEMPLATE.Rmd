@@ -139,7 +139,7 @@ your prompts in addition to the solution
 a)  The code below does not work because the wrong apply function has
     been used. Find out which apply function would be correct and why it
     did not work. Correct the code. Also calculate the rowwise means.
-
+    
 ###Create a sample data frame
 
 tax_data \<- data.frame( Name = c("Munich GmbH", "ABC Inc.", "Backpacks
@@ -152,10 +152,39 @@ Tax_2020 = c(4800, 4200, 5800, 3700), Tax_2021 = c(5200, 3800, 5900,
 column_means \<- lapply(tax_data\[, -1\], 2, mean)
 
 column_means
+```{r}
+##Create a sample data frame
+
+tax_data <- data.frame( Name = c("Munich GmbH", "ABC Inc.", "Backpacks
+1980", "Bavarian Circus"), Tax_2019 = c(5000, 4000, 6000, 3500),
+Tax_2020 = c(4800, 4200, 5800, 3700), Tax_2021 = c(5200, 3800, 5900,
+3400) )
+
+# prompt : column_means <- lapply(tax_data[, -1], 2, mean) column_means
+# right answer from Chat GPT 
+# The code you provided calculates the mean value for each column of the "tax_data" data frame, excluding the first column. Here's a breakdown of the code:
+
+#1. `tax_data[, -1]` selects all columns of the "tax_data" data frame except for the first column ("Name"). The comma (`,`) indicates that you want to select all rows.
+
+#2. `lapply()` is a function in R that applies a given function to each element of a list or vector. In this case, it applies the `mean()` function to each column of the selected data frame.
+
+#Therefore, the code `column_means <- lapply(tax_data[, -1], mean)` calculates the mean value for each column of the "tax_data" data frame, excluding the "Name" column, and stores the results in the "column_means" object. Each element of "column_means" corresponds to the mean value of a specific column in the "tax_data" data frame.
+column_means <- lapply(tax_data[, -1], mean)
+column_means
+## prompt : calculate rowwise means
+## answer from Chat Gpt
+# Calculating row-wise means
+row_means <- rowMeans(tax_data[, -1])
+
+```
+    
+
+
 
 b)  Using ChatGPT try to understand what the rapply() function does.
     Create an easy example with mock data where the function is used and
     explain it in your words.
+
 
 ## Final Note
 
